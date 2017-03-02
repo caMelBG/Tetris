@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript HTML App</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="Logic.js"></script>
+    <script src="GameObjects.js"></script>
+    <script src="HTMLProvider.js"></script>
+</head>
+<body>
+    <script>
+        var board = new GameObjects.Board();
+        var tableHelper = new HTMLProvider.TableHelper();
+        tableHelper.initTable();
+        var engine = new Logic.Engine(board, tableHelper);
+        window.setInterval(function () {
+            engine.gameLoop();
+        }, 300);
+        window.addEventListener('keydown', function (ev) {
+            console.log(ev.keyCode);
+            engine.keyPressed(ev.keyCode);
+        }, false);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿.usedCell {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+}
+
+.freeCell {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+}
+
+table {
+    border: solid;
+    border-color: black;
+    border-spacing: 0;
+}
